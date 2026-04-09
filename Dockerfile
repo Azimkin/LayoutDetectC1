@@ -23,4 +23,4 @@ COPY api.py model.py ./
 
 EXPOSE 5000
 
-CMD ["python", "api.py"]
+CMD ["venv/bin/python3", "api.py"]
