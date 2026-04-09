@@ -1,0 +1,1 @@
+from model import LayoutDetectC1, WordClass
