@@ -26,6 +26,26 @@ python main.py
 
 После запуска программа попросит ввести фразу и выведет предсказанный класс и список классов по словам.
 
+## Flask API
+
+Запуск:
+
+```bash
+python api.py
+```
+
+Примеры запросов:
+
+```bash
+curl -X POST http://127.0.0.1:5000/word \
+  -H "Content-Type: application/json" \
+  -d '{"word":"ghbdtn"}'
+
+curl -X POST http://127.0.0.1:5000/phrase \
+  -H "Content-Type: application/json" \
+  -d '{"phrase":"ghbdtn world"}'
+```
+
 ## Пример
 
 ```text
@@ -42,4 +62,3 @@ Values: [<WordClass.ENG_ON_RUS: 4>, <WordClass.ENG: 2>]
 
 - `main.py` — точка входа
 - `model.py` — модель и логика классификации
-- `out/LayoutDetectC1.pth` — обученные веса

@@ -2,3 +2,4 @@ main.ipynb
 train-data
 out
 .idea
+**/__pycache__/**
