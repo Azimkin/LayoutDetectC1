@@ -1,4 +1,4 @@
-# char-cnn-layout-detect
+# Layout Detect C1
 
 Небольшой проект на PyTorch для определения раскладки текста по фразе или слову.
 
