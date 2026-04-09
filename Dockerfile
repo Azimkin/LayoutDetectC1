@@ -14,7 +14,7 @@ RUN apt-get update \
 RUN pip install Flask --break-system-packages
 
 RUN mkdir -p out \
-    && curl -fsSL "https://github.com/Azimkin/LayoutDetectC1/releases/download/%D0%A11/LayoutDetectC1.pth" \
+    && curl -fsSL "https://github.com/Azimkin/LayoutDetectC1/releases/download/C2/LayoutDetectC2.pth" \
         -o out/LayoutDetectC1.pth
 
 COPY api.py model.py ./
