@@ -8,12 +8,10 @@ ENV PYTHONUNBUFFERED=1 \
 WORKDIR /app
 
 RUN apt-get update \
-    && apt-get install -y --no-install-recommends curl ca-certificates libgomp1 python3-pip python3-venv \
+    && apt-get install -y --no-install-recommends curl ca-certificates libgomp1 python3-pip \
     && rm -rf /var/lib/apt/lists/*
 
-RUN python3 -m venv venv
-
-RUN venv/bin/pip3 install Flask
+RUN pip install Flask --break-system-packages
 
 RUN mkdir -p out \
     && curl -fsSL "https://github.com/Azimkin/LayoutDetectC1/releases/download/%D0%A11/LayoutDetectC1.pth" \
@@ -23,4 +21,4 @@ COPY api.py model.py ./
 
 EXPOSE 5000
 
-CMD ["venv/bin/python3", "api.py"]
+CMD ["python", "api.py"]
